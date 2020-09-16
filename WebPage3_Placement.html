@@ -1,0 +1,593 @@
+<!DOCTYPE html>  
+<html>  
+    <head>
+        <title>Placement</title>
+        <style>
+             *{
+                margin: 0px;
+                padding: 0;
+            }
+            @font-face
+            {
+                font-family: openSens;
+                src:url("font/OpenSans-ExtraBold.ttf"),url("font/OpenSans-Italic.ttf");
+            }
+
+            body
+            {
+                background: url(Photos/AMANBACKGROUND.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .menubar
+            {
+                background: rgb(0,0,0);
+                text-align: left;
+                position: sticky;
+                top: 0px; z-index: 1;
+            }
+            .menubar ul
+            {
+                display: inline-flex;
+                list-style: none;
+                color: white;
+
+            }
+            .menubar ul li
+            {
+                width: 170px; 
+                margin: 5px;
+                padding: 5px;   
+            }
+            .menubar ul li a
+            {
+                color: red;
+                display: block;
+                padding: 7px;
+                text-decoration: none;
+                box-shadow: 1px 2px 40px aqua;
+                border-radius: 5px;
+                box-sizing: border-box;
+                text-align: center;
+                font-family: openSens;
+                font-size: 13px;
+                background-color: aqua;
+            }
+            .menubar ul li .active,.menubar ul li a:hover
+            {
+                background-color: blue;
+                box-shadow: 1px 2px 50px blue;
+                color: white;
+            }
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menubar ul li:hover .sub-menu-1
+            {
+                display:block;
+                position:absolute;
+                background-color:antiquewhite;
+                margin-top: 5px;
+            }
+            .menubar ul li:hover .sub-menu-1 ul
+            {
+                display: block;
+                margin: 10px;
+            } 
+            .menubar ul li:hover .sub-menu-1 ul li
+            {
+                border-bottom: 2px solid blue;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li:last-child
+            {
+                border-bottom: none;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a
+            {
+                color: white;
+                background: red;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a:hover
+            {
+                color: white;
+                background: green;
+            }
+
+
+
+            .sub-menu-2
+            {
+                display: none;
+            }
+            .hoverme:hover .sub-menu-2
+            {
+                display: block;
+                position: absolute;
+                margin-left: 180px; margin-top: -47px;
+                background-color: green;
+            }
+
+
+            #placementHeading{
+                border:1px  groove aqua;       /* border --width style  color */
+                outline:11px inset #09D002;   /* border on border */
+                outline-offset:3px;           /*distance bw border and outline */
+                margin:15px 5px 0px 15px;                   /*distance bw border and monitor border*/
+
+                text-align:center;              /* left right center */
+                text-transform: Capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 0px;             /*distance bw border and text*/
+                text-shadow:5px 5px;
+
+                font-size: 40px;         /*size of fonts */
+                font-family:Georgia;
+                font-weight: bolder;
+
+                background-image: url(Photos/divid1.jpeg) ;
+                background-size: cover;   /*cover,auto it will cover in border size*/  
+                -webkit-text-fill-color:transparent;
+                -webkit-background-clip: text;
+                /* pic inside text */
+            }
+            #marquee
+            {
+                border:1px  groove appworkspace;        /* border --width style  color */
+                outline:3px groove red;                /* border on border */
+                outline-offset:1px;                     /*distance bw border and outline */
+                margin-top: 23px;                       /*distance bw border and monitor border
+                                                              top right bottom left*/
+                border-radius: 20px;                    /*corner curve*/
+                box-shadow: 20px 10px 5px purple;       /*h-offset v-offset blur color;*/
+
+                text-align:justify;                      /* left right center  justify*/
+                text-transform:capitalize;                  /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 0px;                           /*distance bw border and text*/
+
+                box-sizing: border-box;
+                font-size: 15px;                        /*size of fonts */
+                font-family:Georgia;
+                color: window; 
+            }
+
+            #placementtransform
+            {
+                height: 350px;
+                width: 450px;
+                margin-top: 30px;
+                margin-left: 7px;
+                float: left;  
+
+                animation-name: Animation; 
+                animation-duration:1s;
+                animation-iteration-count:infinite;
+                animation-direction:alternate;  
+            }@keyframes Animation
+            {
+                from{ border-radius:10%;}
+                to{border-radius:20%;}
+            }
+
+
+
+            ol
+            {
+                list-style:decimal;
+                background: linear-gradient(to right,purple, white,green);
+                padding: 10px;
+                float: right;
+                margin-top: 20px;
+                width: 250px;
+                height: 470px;
+                transition-property: all;
+                transition-duration: 1s;
+                transition-timing-function: linear;
+                box-sizing: border-box;
+            }
+            ol:hover
+            {
+                width:350px;
+                background:linear-gradient(to right,red,white,blue);
+            }
+            ol li
+            {
+                background:activecaption;
+                padding:10px;
+                margin:10px;
+                font-size: 15px;
+                box-sizing: border-box;
+            }ol li:hover
+            {
+                color: blue;
+                background-color: yellow;
+            }
+
+           
+
+
+
+            #paragraph1
+            {
+                border: 3px groove slategray;
+                margin-top: 50px;
+                clear: both;
+                color:white;                    /*font color*/ 
+                text-align:justify;              /* left right center  justify*/
+                text-transform:  capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 5px;             /*distance bw border and text*/
+
+                font-size: 20px;         /*size of fonts */
+                font-family:Georgia;
+
+                column-count:5;
+                column-gap:25px;  
+            }
+            h1{
+                column-span:all;
+                text-decoration: underline aqua solid;
+            }
+
+
+ .img-container {
+                float: left;
+                width: 32.55%;
+                padding: 5px;
+                box-sizing: border-box;
+               margin-top: 50px;
+               margin-left: 2px;
+               border: 2px solid red;
+            }
+            #percentgif
+            {
+                height: 300px;
+                width: 400px;
+                margin-top: 0px;
+                margin-left: 7px;
+                float: left;
+                clear: both;
+
+                transition-property: all;
+                transition-duration: 1s,1s;
+                transition-timing-function:linear;
+
+            }
+            
+            #percentgif:hover
+            {
+                width: 700px;
+                height: 600px;
+
+
+            }
+            #placementgif
+            {
+                height: 130px;
+                width: 690px;
+                margin-top: 80px;
+                margin-left: 7px;
+                float:left;
+
+            }
+
+            #paragraph2
+            {
+                border: 3px groove slategray;
+                margin-top: 50px;
+                clear: both;
+                color:white;                    /*font color*/ 
+                text-align:justify;              /* left right center  justify*/
+                text-transform:  capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 5px;             /*distance bw border and text*/
+
+                font-size: 15px;         /*size of fonts */
+                font-family:Georgia;
+
+                box-sizing: border-box; 
+                column-count:5;
+                column-gap:25px;  
+            }
+            h2{
+                column-span:none;
+
+            }
+            h2:hover::before
+            {
+                content: "Click Here On";
+                color: Green;
+
+            }
+            h2:hover::after
+            {
+                content: "To Know More ABout";
+                color:Green;
+            }
+
+
+            input
+            {   
+
+                width: 300px;
+                height: 30px;
+                color: red;
+                border: 5px groove aqua;
+                border-radius: 5px;
+                background: antiquewhite;
+            }
+
+            input[type='checkbox']:checked
+            {
+                box-shadow: 0 0 10px red;
+            }
+            ::placeholder
+            {
+                color:black;
+                font-size: 10px;
+            }
+
+
+
+            input:read-only{
+                border: 10px green;
+                background: yellow;
+            }
+            #gender
+            {
+                width: 200px;
+                height: 40px;
+                color: red;
+                border: 8px groove aqua;
+                border-radius: 14px;
+            }
+
+
+
+
+            #information
+            {
+                width: 97%;
+                height: 600px;
+                border: 20px groove red;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+
+
+            #aman
+            {
+                height: 100px;
+                width: 800px;
+                float: left;
+                margin-left: 50px;
+                margin-top: 40px;
+            }
+
+            #myself
+            {
+                border:1px  outset red;       /* border --width style  color */
+                outline:10px inset graytext;   /* border on border */
+                outline-offset:3px;           /*distance bw border and border */
+                width: 90%;                   
+                height: 240px;
+                margin:200px 10px 30px 50px;     /* top right bottom left */
+
+                color:white;                    /*font color*/ 
+                text-align:justify;                /* left right center justify */
+                text-transform:capitalize;     /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 15px;                   /*distance bw border and text*/
+                font-size: 25px;                /*size of fonts */
+                font-family:Georgia;
+                clear: both;
+
+                text-indent:0px;                /*distance of first line from left border*/
+                background-image: url(Photos/Notice.jpg);
+                background-clip: content-box;   /* image will cover in content only*/
+                background-size: cover;         /*so image will  be cover in border*/
+                box-sizing: border-box;
+
+            }
+            
+            .paginationcenter {
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                color: black;
+                float: left;
+                font-size: 20px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid yellow;
+                margin: 0 4px;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: blue;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+
+
+        </style>
+    <body class="container">
+         <div class="menubar">
+            <ul>
+                <li><a href="index.html"><i style="color:yellow" class="fas fa-home"></i> HOME PAGE</a></li>
+                <li><a href="WebPage4_Courses.html"><i style="color:darkmagenta" class="fab fa-discourse"></i> Courses And Degrees</a>       
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                            <li class="hoverme"><a href="WebPage4_Courses.html">PostGraduation</a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">PostGraduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                                    </ul>
+                                </div></li>
+                            <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="WebPage3_Placement.html" class="active"><i style="color:red" class="fas fa-user-graduate"></i> Placements</a></li>
+                <li><a href="WebPage2_Hostel.html"><i style="color:firebrick" class="fas fa-hotel"></i> Hostel Life</a></li>
+                <li><a href="Study Room/index.html"><i style="color:green" class="fas fa-graduation-cap"></i> Academics</a></li>
+                <li><a href="WebPage5_SignUp.html"><i style="color:blue" class="fas fa-user-plus"></i> Sign Up</a>
+            </ul>
+        </div>
+        
+        <div id="placementHeading">
+            Training And Placement Department
+        </div>
+        <div id="marquee">
+            <marquee>
+                We at GLA strongly believe in the creation of good quality human resource with training of intellectual minds. To help students stand-out and gain competitive edge over the others, we stress on developing both functional skills and exceptional practical outlook. The Training and Placement cell works tirelessly towards ensuring employment for all students across various industries and helping budding entrepreneurs in establishing successful businesses. The department organizes activities and workshops at a regular basis to enable students to be effective team leaders and players.
+                The department is headed by some eminent professors with a proven track record and professionals who have made a mark in the industry. This association introduces our students to the concepts of corporate culture and a sense of influential patronage. With many firsts to its credit and an impeccable record to boast of, the T&P cell works round-the-clock to ensure that the students of the University get placed in reputed companies at lucrative terms across various industries.
+                The cell works with a twin-fold focus on augmenting internal competencies by contemporary grooming of students and enabling the industry to identify and absorb intellectuals with the requisite technical and managerial skills.
+                The cell also provides assistance to students in applying for summer trainings and projects in various companies. The university critically evaluates these summer trainings and projects as they form a part of the curricula.
+                The staunch cororate patronage which separates the university from its contemporaries originates from its unequivocal focus to produce world class technocrats and managers for which the regular corporate interactions weave the thread.
+                On an average, more than 50 guest lectures by veterans across various industries are conducted every semester to enable students to understand real-life situations and experiences. This aims to make students ready to face situations which may arise in their professional lives.
+                The T&P cell in co-ordination with the various technical and non-technical departments regularly organise industrial visits to acquire technical activities involved in production design, maintenance of engineering products in case of technical courses. For non-technical students these visits focus on learning through interaction with managers who share with the students the recent developments, strategies and market moves of the industry.
+            </marquee>
+        </div>
+
+        <img src="Photos/placementtransform.png" id="placementtransform">
+        <img src="Photos/placement.jpg" id="placementtransform">
+
+
+
+
+
+        <ol>
+            <li>Overview</li>
+            <li>The Team</li>
+            <li>Placement Record</li>
+            <li>Placement policy</li>
+            <li>Career Counseling</li>
+            <li>Industry Academic Partnership</li>
+            <li>Alumni Testimonials</li>
+            <li>Helpline And FAQs</li>
+            <li>Get In Touch</li>
+        </ol>
+
+       
+
+
+            <div id="paragraph1">
+                <h1 style="color: royalblue"> Coursewise Top Recruiters</h1>
+                GLA is a well renowned name in the field of education and is directly contributing to the overall education scenario of the country. Our students are working for some very famous companies in the country in different functions.150+
+                MNCs with salary packsges ranging from 4.5 to 32 LPA (Batch 2020) and Still Counting 1700+ Placements offers (batch 2020) & still counting... 4%
+                Average Placement over the last 10 years
+                32LPA  Highest Package Offfered  (in Campus) The department is headed by some eminent professors with a proven track record and professionals who have made a mark in the industry. This association introduces our students to the concepts of corporate culture and a sense of influential patronage. With many firsts to its credit and an impeccable record to boast of, the T&P cell works round-the-clock to ensure that the students of the University get placed in reputed companies at lucrative terms across various industries.
+            </div>
+
+             <div class="img-container">
+            <img src="Photos/container1.jpeg"  style="width:100%;height: 260px;">
+        </div>
+        <div class="img-container">
+            <img src="Photos/container2.jpg"  style="width:100%;height: 260px;">
+        </div>
+        <div class="img-container">
+            <img src="Photos/container3.jpg"  style="width:100%;height: 260px;">
+        </div>
+        
+        
+            <img src="Photos/100.gif" id="percentgif">
+            <img src="Photos/placementgif.gif" id ="placementgif">
+
+            <div id="paragraph2">
+                <h2 style="color: red"> Training And Placement </h2>
+                The department is headed by some eminent professors with a proven track record and professionals who have made a mark in the industry. This association introduces our students to the concepts of corporate culture and a sense of influential patronage. With many firsts to its credit and an impeccable record to boast of, the T&P cell works round-the-clock to ensure that the students of the University get placed in reputed companies at lucrative terms across various industries.
+                The cell works with a twin-fold focus on augmenting internal competencies by contemporary grooming of students and enabling the industry to identify and absorb intellectuals with the requisite technical and managerial skills.
+                The cell also provides assistance to students in applying for summer trainings and projects in various companies. The university critically evaluates these summer trainings and projects as they form a part of the curricula.
+                The staunch corporate patronage which separates the university from its contemporaries originates from its unequivocal focus to produce world class technocrats and managers for which the regular corporate interactions weave the thread.
+                On an average, more than 50 guest lectures by veterans across various industries are conducted every semester to enable students to understand real-life situations and experiences. This aims to make students ready to face situations which may arise in their professional livesThe T&P cell in co-ordination with the various technical and non-technical departments regularly organise industrial visits to acquire technical activities involved in production design, maintenance of engineering products in case of technical courses. For non-technical students these visits focus on learning through interaction with managers who share with the students the recent developments, strategies and market moves of the industry.
+            </div>
+
+            <div id="contactform">
+                <form>
+                    <h1 style="color:darkorange">Please Fill This Contact Form</h1>
+                    <input type="text" placeholder="Enter Your First Name">
+                    <input type="text" placeholder="Enter Your Last Name">
+                    <br><br>
+                    <input type="text" placeholder="Enter Your Contact Number" >
+                    <br><br>
+                    <input type="date" >
+                    <br><br>
+                    <input type="number" placeholder="Press Scroll For Age">
+                    <br><br>
+                    <select name="Gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <h4 style="color:aqua">Do You Agree with Terms And Conditions</h4>
+                    <input type="radio" name="Agree or Not" value="Yes" id="yesornot" >Yes
+                    <input type="radio" name="Agree or Not" value="Yes" id="yesornot" >No
+
+                    <br><br>
+                    <input type="range" name="Give The Rating To Our Website" min="1" max="5">
+                    <br><br>
+                    <input  type="checkbox" name="call" value="Call" checked >
+                    <p style="color:aqua">Call</p>
+                    <input type="checkbox" name="call" value="Message">
+                    <p style="color:aqua">Message</p>
+                    <br><br>
+                    <br><br>
+                    <input type="button" value="Sign Up">
+                    <input type="submit">
+                </form>
+            </div>
+
+            <img src="Photos/glapremade.png" id="information">
+
+            <img src="Photos/aman.gif" id="aman">
+
+            <p id="myself">
+                Hello Guys this is aman kushwaha 3rd year btech CS Student.I have  created this website
+                for educational purpose. on this website i will provide you assignments and pdf for all the btech cs students
+                . Here you can download the latest solution of evey assignment which is already given by faculty in your class.
+                <br><b><u>NOTE:</u></b>--this website is created only for educational purpose please do your assignment
+                by Your yourself.For More Notifiactions you can signup on this website when a new assignment will upload you
+                will get immediate notifiaction on your browser. ThankS Guys
+            </p>
+            
+            
+            
+             <div class="paginationcenter">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="index.html">1</a>
+            <a href="WebPage4_Courses.html">2</a>
+            <a href="WebPage3_Placement.html"  class="active">3</a>
+            <a href="WebPage2_Hostel.html">4</a>
+            <a href="Study Room/index.html">5</a>
+            <a href="WebPage5_SignUp.html">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+    </body>
+</html>

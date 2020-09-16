@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+           <link href="icons/all.css" rel="stylesheet" type="text/css"/>
+        <style>
+            *
+            {
+                margin: 0px;
+                padding: 0px;
+                font-family: vardana;
+                box-sizing: border-box;
+                
+            }
+            body
+            {
+                background-image: url("background2.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: sans-serif;
+            }
+
+
+            .menubar
+            {
+                background-color: rgba(200,0,0,0.5);
+                text-align: right;   /*list is assigned to right*/
+            }
+            .menubar ul
+            {
+                display: inline-flex;   /*list will be converted into one line*/
+                list-style: none;
+                
+            }
+            .menubar ul li
+            {
+                padding: 2px;
+                margin: 10px;               
+            }
+            .menubar ul li a
+            {
+                text-decoration: none;
+                color: #fff;
+                font-size: 25px;
+            }
+            .active,.menubar ul li a:hover
+            {
+                background: #2bab0d;
+                border-radius: 5px;
+                color: yellow;
+            }
+
+
+            /*SUB MENU */
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menubar ul li:hover .sub-menu-1
+            {
+                display: block;
+                position: absolute;
+                background: rgb(0,100,0);
+                margin-top: 0px;
+                margin-left: -15px;
+            }
+            .menubar ul li:hover .sub-menu-1 ul
+            {
+                margin: 10px;
+                display: block;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li
+            {
+                width: 150px;
+                padding: 10px;
+                border-bottom: 1px groove red;
+                background: transparent;
+                border-radius: 0;
+                text-align: left;
+
+            }
+            .menubar ul li:hover .sub-menu-1 ul li:last-child
+            {
+                border-bottom: none;
+            }
+
+            .menubar ul li:hover .sub-menu-1 ul li a
+            {
+                color: aqua;
+            }
+
+
+          
+           .Header {
+                list-style-type: none;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(0,0,0,1);
+                border: 1px solid red;
+                position:sticky;
+                top: 0;
+                width: 100%;
+                z-index: 1;          /*it will over of every element*/
+            }
+
+            .Header li {
+                float: left;
+                border-right: 1px solid red;
+                box-sizing: border-box;
+            }
+
+            .Header li a {
+                display: block; /*a is inline we can't give padding etc to it so make it block'*/
+                color: white;
+                font-family: openSens; font-size: 15px;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .Header li a:hover:not(.active) {
+                background-color: #09D002;
+            }
+
+            .Header .active {
+                background-color: #09D002;
+                
+            }
+            
+            
+            
+               ul {
+                list-style-type: none;
+                margin-top: 9px;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(0,0,0,1);
+                border: 1px solid red;
+                position:sticky;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+            }
+
+            li {
+                float: left;
+                border-right: 1px solid red;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #09D002;
+            }
+
+            .active {
+                background-color: #09D002;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="menubar">
+            
+                <ul>
+                    <li class="active"><a href="WebPage000.html" target="_self">Home</a></li>
+                    <li><a href="WebPage4_Courses.html">Courses</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="WebPage3_Placement.html">Placement</a></li>
+                                <li><a href="WebPage2_Hostel.html">Hostel</a></li>
+                                <li><a href="web3.html">About Us</a></li>
+                                <li><a href="WebPage2_Hostel.html">Hostel</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li><a href="WebPage3_Placement.html">Placement</a></li>
+                    <li><a href="WebPage2_Hostel.html">Hostel</a></li>
+                    <li><a href="web3.html">About Us</a></li>
+       
+        </div>
+         <ul>
+            <li><a href="WebPage1_Home.html"><i style="color:darkorchid" class="fas fa-home"></i> HOME PAGE</a></li>
+            <li><a href="WebPage4_Courses.html"><i style="color:aqua" class="fab fa-discourse"></i> Courses And Degrees</a></li>
+            <li><a href="WebPage3_Placement.html"><i style="color:yellow" class="fas fa-user-graduate"></i> Placement And Training</a></li>
+            <li><a href="WebPage2_Hostel.html"><i style="color:palegreen" class="fas fa-hotel"></i> Hostel Life</a></li>
+            <li><a class="active" href="WebPage5_SignUp.html"><i style="color:aqua" class="fas fa-user-plus"></i> Sign Up</a>
+            <li style="float:right;"><img src="glalogo.jpg" class="glalogo" style="width:120px;height:40px;"><li>
+        </ul>
+        
+    </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="icons/all.css" rel="stylesheet" type="text/css"/>
+        <style>
+             *{
+                margin: 0px;
+                padding: 0;
+            }
+            body{
+                background-image: url('Photos/Web5_background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .menubar
+            {
+                background: rgb(0,0,0);
+                text-align: left;
+                position: sticky;
+                top: 0px; z-index: 1;
+            }
+            .menubar ul
+            {
+                display: inline-flex;
+                list-style: none;
+                color: white;
+
+            }
+            .menubar ul li
+            {
+                width: 170px; 
+                margin: 5px;
+                padding: 5px;   
+            }
+            .menubar ul li a
+            {
+                color: red;
+                display: block;
+                padding: 7px;
+                text-decoration: none;
+                box-shadow: 1px 2px 40px aqua;
+                border-radius: 5px;
+                box-sizing: border-box;
+                text-align: center;
+                font-family: openSens;
+                font-size: 13px;
+                background-color: aqua;
+            }
+            .menubar ul li .active,.menubar ul li a:hover
+            {
+                background-color: blue;
+                box-shadow: 1px 2px 50px blue;
+                color: white;
+            }
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menubar ul li:hover .sub-menu-1
+            {
+                display:block;
+                position:absolute;
+                background-color:antiquewhite;
+                margin-top: 5px;
+            }
+            .menubar ul li:hover .sub-menu-1 ul
+            {
+                display: block;
+                margin: 10px;
+            } 
+            .menubar ul li:hover .sub-menu-1 ul li
+            {
+                border-bottom: 2px solid blue;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li:last-child
+            {
+                border-bottom: none;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a
+            {
+                color: white;
+                background: red;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a:hover
+            {
+                color: white;
+                background: green;
+            }
+
+
+
+            .sub-menu-2
+            {
+                display: none;
+            }
+            .hoverme:hover .sub-menu-2
+            {
+                display: block;
+                position: absolute;
+                margin-left: 180px; margin-top: -47px;
+                background-color: green;
+            }
+
+
+            form
+            {
+                width: 60%;
+                margin: 20px auto;
+                padding: 25px;
+                box-sizing: border-box;
+                color: aqua;
+                background-color: rgba(0,0,0,0.7);
+            }
+            input[type=text]
+            {
+                width: 100%;
+                padding: 10px 15px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border:3px groove red;
+            }
+            input[type=text]:focus
+            {
+                background-color: black;
+                color: white; 
+                font-size: 15px;
+            }
+            input[type=number]
+            {
+                width: 30%;
+                padding: 10px 15px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border:3px groove red;
+                transition: all 0.5s;
+            }
+            input[type=number]:focus
+            {
+                background-color: black;
+                color: white; 
+                font-size: 15px;
+            }
+            input[type=number]:hover
+            {
+                width:50%;
+            }
+
+
+            select,input[type='date']  
+            {
+                width: 20%;
+                padding: 10px 15px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border:3px groove red;
+                
+            }
+            
+            input[type="radio"]
+            {
+                width: 25px;
+                height:25px;
+            }
+
+
+            textarea {
+                width: 100%;
+                padding: 10px 15px;
+                margin:10px auto;
+                box-sizing: border-box;
+                border:3px groove blue;
+                border-radius: 15px;
+                opacity: 0.8;
+            }
+
+
+            input[type=submit]
+            {
+                width: 100%;
+                background-color: red;
+                padding: 10px 15px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border:3px groove aqua;
+                color: white;
+                font-size: 15px;
+            }
+            .aman
+            {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                margin-right: 10px;
+                border:1px solid red;
+                color:white;
+            }
+            
+            
+                 .paginationcenter {
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                color: black;
+                float: left;
+                font-size: 20px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid yellow;
+                margin: 0 4px;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: blue;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="menubar">
+            <ul>
+                <li><a href="index.html"><i style="color:yellow" class="fas fa-home"></i> HOME PAGE</a></li>
+                <li><a href="WebPage4_Courses.html"><i style="color:darkmagenta" class="fab fa-discourse"></i> Courses And Degrees</a>       
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                            <li class="hoverme"><a href="WebPage4_Courses.html">PostGraduation</a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">PostGraduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                                    </ul>
+                                </div></li>
+                            <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="WebPage3_Placement.html"><i style="color:red" class="fas fa-user-graduate"></i> Placements</a></li>
+                <li><a href="WebPage2_Hostel.html"><i style="color:firebrick" class="fas fa-hotel"></i> Hostel Life</a></li>
+                <li><a href="Study Room/index.html"><i style="color:green" class="fas fa-graduation-cap"></i> Academics</a></li>
+                <li><a href="WebPage5_SignUp.html"  class="active"><i style="color:red" class="fas fa-user-plus"></i> Sign Up</a>
+            </ul>
+        </div>
+
+      
+
+
+
+        <form>
+            <h1 style="margin:0;padding: 0; text-align: center; color:blue;text-shadow:2px 2px white;"> <i class="fas fa-sign-in-alt" style="color:red"></i> Sign Up For Admission</h1>
+            <label for="fname"><i class="fas fa-2x fa-file-signature" style="color:yellow;"></i> First Name</label>
+            <input type="text" name="fname" placeholder="Please enter your first name here">
+            <label for="lname"><i class="fas fa-2x fa-file-signature" style="color:yellow;"></i> Last Name</label>
+            <input type="text" name="lname" placeholder="Please enter your last name here">
+            <label for="email"><i class="fas fa-2x fa-mail-bulk" style="color:yellow;"></i> Email Account</label>
+            <input type="text" name="email" placeholder="Please enter your email here">
+
+            <label for="mobile"><i class="fas fa-2x fa-phone-square-alt" style="color:green"></i> Contact Number</label>
+            <br>
+            <input type="number" name="mobile" placeholder="+91">
+
+            <select class="gender" name="Gender">
+                <option value="male">Male</option>
+                <option value="femal">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="date">
+            
+            
+            <h3 style="margin: 0;margin-bottom: 5px;">Are You Agree With Terms And Conditions</h3>
+            <input type="radio" name="agree" checked>Yes
+            <input type="radio" name="agree" >No
+            
+
+            <textarea>Enter Your Feedback..........</textarea>
+
+            <br>
+            <input type="submit" value="Sign Up">
+        </form>
+        
+        
+        <div class="aman">
+            Dev. Aman Kushwaha
+        </div> 
+        
+        
+        <div class="paginationcenter">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="index.html">1</a>
+            <a href="WebPage4_Courses.html">2</a>
+            <a href="WebPage3_Placement.html">3</a>
+            <a href="WebPage2_Hostel.html">4</a>
+            <a href="Study Room/index.html">5</a>
+            <a href="WebPage5_SignUp.html" class="active">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Courses</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0;
+            }
+            @font-face
+            {
+                font-family: openSens;
+                src:url("font/OpenSans-ExtraBold.ttf"),url("font/OpenSans-Italic.ttf");
+            }
+
+            body
+            {
+                background: url(Photos/background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .menubar
+            {
+                background: rgb(0,0,0);
+                text-align: left;
+                position: sticky;
+                top: 0px; z-index: 1;
+            }
+            .menubar ul
+            {
+                display: inline-flex;
+                list-style: none;
+                color: white;
+
+            }
+            .menubar ul li
+            {
+                width: 170px; 
+                margin: 5px;
+                padding: 5px;   
+            }
+            .menubar ul li a
+            {
+                color: red;
+                display: block;
+                padding: 7px;
+                text-decoration: none;
+                box-shadow: 1px 2px 40px aqua;
+                border-radius: 5px;
+                box-sizing: border-box;
+                text-align: center;
+                font-family: openSens;
+                font-size: 13px;
+                background-color: aqua;
+            }
+            .menubar ul li .active,.menubar ul li a:hover
+            {
+                background-color: blue;
+                box-shadow: 1px 2px 50px blue;
+                color: white;
+            }
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menubar ul li:hover .sub-menu-1
+            {
+                display:block;
+                position:absolute;
+                background-color:antiquewhite;
+                margin-top: 5px;
+            }
+            .menubar ul li:hover .sub-menu-1 ul
+            {
+                display: block;
+                margin: 10px;
+            } 
+            .menubar ul li:hover .sub-menu-1 ul li
+            {
+                border-bottom: 2px solid blue;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li:last-child
+            {
+                border-bottom: none;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a
+            {
+                color: white;
+                background: red;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a:hover
+            {
+                color: white;
+                background: green;
+            }
+
+
+
+            .sub-menu-2
+            {
+                display: none;
+            }
+            .hoverme:hover .sub-menu-2
+            {
+                display: block;
+                position: absolute;
+                margin-left: 180px; margin-top: -47px;
+                background-color: green;
+            }
+            
+              #paragraph1 
+            {
+                margin-top: 0px;
+                float: top;
+                border: 20px groove darkgray;
+                padding: 10px;
+                background:url(Photos/courses_image2.jpg);
+                background-size: cover;
+                background-clip: content-box;  
+            }
+            h1
+            {   color: red;
+                column-span:all;
+                text-decoration: underline dotted green;
+            }
+            h1::first-letter
+            {
+                color: yellow;
+                size: 30px;
+            }
+
+
+
+           
+
+
+          
+            #coursesgif
+            {
+                float: right;
+                width: 350px;
+                height: 190px;
+                position: fixed;
+                right: 20px;
+            }
+
+
+            table
+            {
+                border:10px groove crimson;
+                border-spacing: 3px;
+                width: 400px;
+                font-size: 15px;
+                border-collapse:separate;
+
+                clear:both;
+                color: palegreen;
+                margin-bottom: 20px;
+                margin-top: 20px;
+
+                transition-property: all;
+                transition-duration: .5s;
+                transition-timing-function:ease-out;
+            }  table:hover
+            {
+                width: 500px;
+            }
+            table td,th
+            {
+                border:2px groove palegreen;
+                padding: 4px;
+            }
+            th
+            {
+                text-align: left;
+                background-color:black;
+                color: white;
+            }
+            td:hover
+            {
+                background: blue;
+            }
+
+
+
+
+
+            #paragraph2
+            {
+                border: 4px groove aqua;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                margin-top: 50px;
+                clear: both;
+                color:white;                    /*font color*/ 
+                text-align:justify;              /* left right center  justify*/
+                text-transform:  capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 5px;             /*distance bw border and text*/
+
+                font-size: 15px;         /*size of fonts */
+                font-family:Georgia;
+
+                column-count:5;
+                column-gap:25px;  
+            }
+
+
+
+
+
+
+
+
+
+
+
+            #news1
+            { 
+                margin-top: 20px;
+                margin-bottom: 20px;
+                height: 500px;
+                width: 100%;
+                float: left;
+            }
+            #news2
+            {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                height: 200px;
+                width: 50%;
+                float: left;
+            }
+
+            #help
+            {  
+                margin-top: 50px;
+                margin-left: 20px;
+                margin-bottom: 50px;
+                float: left;;
+
+
+            }
+
+
+            #contactform
+            {
+                background: rgba(0,0,0,.2);
+                clear: both;
+                width: 70%;
+                margin-left: 20px;
+                padding-left: 10px;
+                box-sizing: border-box;
+                padding-bottom: 10px;
+
+            }
+            input
+            {
+                width: 400px;
+                height: 40px;
+                color: red;
+                border: 5px groove aqua;
+                border-radius: 14px;
+                background: mintcream;
+            }
+            #gender
+            {
+                width: 200px;
+                height: 40px;
+                color: red;
+                border: 8px groove aqua;
+                border-radius: 14px;
+
+            }
+            input:focus
+            {
+                border: 5px groove red;
+                border-radius: 14px;
+            }
+
+
+
+            #myselfintro4
+            {
+                border:1px  outset red;       /* border --width style  color */
+                outline:10px inset graytext;   /* border on border */
+                outline-offset:3px;           /*distance bw border and border */
+                width: 95%;                   
+                height: 200px;
+                margin-top: 50px;
+                margin-left: 50px;
+                margin-bottom: 20px;
+                clear: both;
+
+
+                color:white;                    /*font color*/ 
+                text-align:center;                /* left right center justify */
+                text-transform:uppercase;     /* capitalize | uppercase | lowercase | none | inherit*/
+                white-space: pre;             /*same sapces will be there*/
+                line-height: 35px;
+                padding: 10px;                   /*distance bw border and text*/
+                font-size: 25px;                /*size of fonts */
+                font-family:Georgia;
+                box-sizing: border-box;
+
+                /*distance of first line from left border*/
+            }
+
+
+            
+            .paginationcenter {
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                color: white;
+                float: left;
+                font-size: 20px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid yellow;
+                margin: 0 4px;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: blue;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+
+
+
+
+
+        </style>
+    </head>
+
+
+    <body>
+         <div class="menubar">
+            <ul>
+                <li><a href="index.html" ><i style="color:yellow" class="fas fa-home"></i> HOME PAGE</a></li>
+                <li><a href="WebPage4_Courses.html"  class="active"><i style="color:darkmagenta" class="fab fa-discourse"></i> Courses And Degrees</a>       
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                            <li class="hoverme"><a href="WebPage4_Courses.html">PostGraduation</a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">PostGraduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                                    </ul>
+                                </div></li>
+                            <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="WebPage3_Placement.html"><i style="color:red" class="fas fa-user-graduate"></i> Placements</a></li>
+                <li><a href="WebPage2_Hostel.html"><i style="color:firebrick" class="fas fa-hotel"></i> Hostel Life</a></li>
+                <li><a href="Study Room/index.html"><i style="color:green" class="fas fa-graduation-cap"></i> Academics</a></li>
+                <li><a href="WebPage5_SignUp.html"><i style="color:blue" class="fas fa-user-plus"></i> Sign Up</a>
+            </ul>
+        </div>
+        
+     
+        <div id="paragraph1">
+            <h1>GLA University Admission 2020:Entrance Exam, Last Date, Admission form:</h1>
+            Candidates can apply online or offline on payment of INR 700 (INR 500 for B.Ed) as application fee.
+            For UG courses, candidates must have passed 10+2 exam with a minimum aggregate of 50%.
+            For Professional courses, the minimum aggregate of 50% is required in the relevant discipline except for B.Tech and M.Tech which require 60% aggregate.
+            Admission to all the courses is based on performance in GLAET followed by an interview.
+            GLAET is an online MCQs based test of varying duration (60 min to 2 hours) depending on the course applied for.
+            Apart from GLAET, MBA admission is also offered on the basis of a valid score in CAT/ MAT/ XAT or UPSEE.
+            For M.Tech course, GATE score is also acceptable at the time of admission.
+            For Ph.D. (Full-Time) and Part-Time courses, GLA University conducts separate entrance test. CSIR NET/ UGC NET/ GATE or equivalent exam qualified candidates are also eligible to apply.
+        </div>
+        
+        
+       
+        <img src="Photos/courses.gif" id="coursesgif">
+
+        <table>
+            <tr>
+                <th>COURSE</th>
+                <th>ELIGIBILITY</th>
+                <th>TOTAL FEES/ YEAR</th>
+                <th>DETAILED FEE STRUCTURE</th>
+            </tr>
+
+            <tr>
+                <td>B.Tech</td>
+                <td>10+2 with 60% + GLAET</td>
+                <td>₹1.71 Lakhs</td>
+                <td>click here</td>
+            </tr>
+            <tr>
+                <td>MBA</td>
+                <td>Graduation with 50% + GLAET</td>
+                <td>₹2.19 Lakhs</td>
+                <td>click here</td>
+            </tr>
+            <tr>
+                <td>M.tech</td>
+                <td>Pass in Graduation + GLAET</td>
+                <td>₹1.71 Lakhs</td>
+                <td>click here</td>
+            </tr>
+            <tr>
+                <td>BBA</td>
+                <td>10+2 with 50% + GLAET</td>
+                <td>₹1.28 Lakhs</td>
+                <td>click here</td>
+            </tr>
+            <tr>
+                <td>Ph.D</td>
+                <td>Post Graduation</td>
+                <td>₹63,667</td>
+                <td>click here</td>
+            </tr>
+            <tr>
+                <td>B.Tech {Lateral}</td>
+                <td>10+3 with 60% + GLAET</td>
+                <td>₹1.56 Lakhs</td>
+                <td>click here</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+        <div id="paragraph2">
+            <h1 style="color: royalblue">GLA University B.Tech, B.Pharm & D.Pharm Admission 2020 :</h1>
+            GLA University offers B.Tech and B.Pharm courses of 4-year duration. Admission is based on candidates’ performance in GLAET followed by personal interview. GLA University also offers a diploma course in Pharmacy. This course is of 2-year duration.
+            GLAET is an online MCQs based test of 2 hours duration. Candidates can apply for the same online as well as offline. The registration fee can be paid either online through credit card, debit card or net banking; or offline through cash or demand draft.
+        </div>
+        
+        
+        
+        <img src="Photos/placement2.png" id="news1">
+        
+        
+        <img src="Photos/news1.png"  id="news2">
+        <img src="Photos/news2.png"  id="news2">
+
+
+
+
+
+
+        <img src="Photos/help.png" id="help">
+
+
+
+
+        <div id="contactform">
+            <form>
+                <h1 style="color:darkorange">Please Fill This Contact Form</h1>
+                <input type="text" placeholder="Enter Your First Name">
+                <input type="text" placeholder="Enter Your Last Name">
+                <br><br>
+                <input type="text" placeholder="Enter Your Contact Number" >
+                <br><br>
+                <input type="date" placeholder="Enter DOB" >
+                <br><br>
+                <input type="number" placeholder="Press Scroll For Age">
+                <br><br>
+                <select name="Gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>
+                <h4 style="color:aqua">Do You Agree with Terms And Conditions</h4>
+                <input type="radio" name="Agree or Not" value="Yes" id="yesornot" >Yes
+                <input type="radio" name="Agree or Not" value="Yes" id="yesornot" >No
+
+                <br><br>
+                <input type="range" name="Give The Rating To Our Website" min="1" max="5">
+                <br><br>
+                <input  type="checkbox" name="call" value="Call" checked >
+                <p style="color:aqua">Call</p>
+                <input type="checkbox" name="call" value="Message">
+                <p style="color:aqua">Message</p>
+                <br><br>
+                <br><br>
+                <input type="button" value="Sign Up">
+                <input type="submit">
+            </form>
+        </div>
+
+        <p id="myselfintro4"><i>Owner Of This Website And CEO</i> :  <b>    Aman Kushwaha</b>
+            <i> linkedin</i>:<b>     aman-kushwaha-ba0038182</b>
+            <i>Instagram</i>:<b>     instagram.com/the_amankushwaha</b>
+            <i>Twitter</i>:<b>      twitter.com/amankushwaha57</b>
+            <i>Facebook</i>:<b>     facebook.com/amankushwaha57</b>    
+        </p>
+        
+        
+      <div class="paginationcenter">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="index.html">1</a>
+            <a href="WebPage4_Courses.html">2</a>
+            <a href="WebPage3_Placement.html">3</a>
+            <a href="WebPage2_Hostel.html" class="active">4</a>
+            <a href="Study Room/index.html">5</a>
+            <a href="WebPage5_SignUp.html">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+    </body>
+</html>

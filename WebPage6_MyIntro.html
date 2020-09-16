@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="icons/all.css" rel="stylesheet" type="text/css"/>
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+
+            body {
+                font-family: Arial;
+                margin: 0;
+            }
+
+
+            .header {
+                padding: 60px;
+                text-align: center;
+                background:black;
+                color: aqua;
+            }
+
+          
+            .navbar {
+                display:flex;
+                background-color: #ddd;
+            }
+
+          
+            .navbar a {
+                color:black;
+                font-size: 15px;
+                padding: 10px 10px;
+                text-decoration: none;
+                text-align: center;
+                border:5px solid blueviolet;
+            }
+
+          
+            .navbar a:hover {
+                background-color:gold ;
+                color: black;
+            }
+
+            /* Column container */
+            .row {  
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            /* Create two unequal columns that sits next to each other */
+            /* Sidebar/left column */
+            .side30 {
+                flex: 30%;
+                background-color: #f1f1f1;
+                padding: 20px;
+            }
+            
+             /* Fake image, just for this example */
+            .amanimg {
+                background-color: #aaa;
+                width: 60%;
+                height:250px;
+                padding: 10px;
+            }
+            .amanimg img
+            {
+                width:100%;
+                height: 100%;
+            }
+            
+            
+            
+            
+
+            /* Main column */
+            .main70 {
+                flex: 70%;
+                background-color: white;
+                padding: 20px;
+            }
+            .amanimg2
+            {
+                height: 200px;
+                width: 250px;
+            }
+            .amanimg2 img
+            {
+                height: 100%;
+                width:100%;
+            }
+            
+            .amanimg3
+            {
+                width: 600px;;
+                height: 200px;
+            }
+            .amanimg3 img
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+           
+
+            /* Footer */
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+            }
+
+            /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 700px) {
+                .row, .navbar {   
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="header">
+            <h1>Website Owner:Aman Kushwaha</h1>
+        </div>
+
+
+        <div class="navbar">
+            <a href="https://www.linkedin.com/in/aman-kushwaha-ba0038182/"><i class="fab fa-linkedin" style="color:blue;"></i> Linkdin</a>
+            <a href="#"><i class="fab fa-twitter-square" style="color:blue;"></i> Twitter</a>
+            <a href="#"><i class="fab fa-instagram-square" style="color:red;"></i> Instagram</a>
+            <a href="#"><i class="fab fa-facebook-square" style="color:blue;"></i> Facebook</a>
+        </div>
+
+
+        <div class="row">
+            <div class="side30">
+                <h2>Aman Kushwaha</h2>
+                <div class="amanimg"><img src="Photos/aman.jpg"></div>
+                <p>Hello Guys my name Is Aman Kushwaha,developer of this website.</p>
+            </div>
+            
+            <div class="main70">
+                <h2>Front End Developer</h2>
+                <div class="amanimg2"><img src="Photos/aman2.jpeg"></div>
+                <p>My Passion</p>
+                <p>I am a quick learner and a hardworking person. I have always done my work with full dedication. I can grasp new responsibilities and new things very quickly. so i have created this Website for my GLA</p>
+                <br>
+                <h2>Linkdin For More Detail </h2>
+                <div class="amanimg3"><img src="Photos/aman3.png"></div><br>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>Thank You Guys <i class=" fa-2x fas fa-smile" style="color:salmon;"></i></h2>
+        </div>
+
+    </body>
+</html>

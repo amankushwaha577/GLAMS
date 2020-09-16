@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="icons/all.css" rel="stylesheet" type="text/css"/>
+        <style>
+
+            *{
+                margin: 0px;
+                padding: 0;
+            }
+            @font-face
+            {
+                font-family: openSens;
+                src:url("font/OpenSans-ExtraBold.ttf"),url("font/OpenSans-Italic.ttf");
+            }
+
+            body
+            {
+                background: url(Photos/AMANBACKGROUND.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .menubar
+            {
+                background: rgb(0,0,0);
+                text-align: left;
+                position: sticky;
+                top: 0px; z-index: 1;
+            }
+            .menubar ul
+            {
+                display: inline-flex;
+                list-style: none;
+                color: white;
+
+            }
+            .menubar ul li
+            {
+                width: 170px; 
+                margin: 5px;
+                padding: 5px;   
+            }
+            .menubar ul li a
+            {
+                color: red;
+                display: block;
+                padding: 7px;
+                text-decoration: none;
+                box-shadow: 1px 2px 40px aqua;
+                border-radius: 5px;
+                box-sizing: border-box;
+                text-align: center;
+                font-family: openSens;
+                font-size: 13px;
+                background-color: aqua;
+            }
+            .menubar ul li .active,.menubar ul li a:hover
+            {
+                background-color: blue;
+                box-shadow: 1px 2px 50px blue;
+                color: white;
+            }
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menubar ul li:hover .sub-menu-1
+            {
+                display:block;
+                position:absolute;
+                background-color:antiquewhite;
+                margin-top: 5px;
+            }
+            .menubar ul li:hover .sub-menu-1 ul
+            {
+                display: block;
+                margin: 10px;
+            } 
+            .menubar ul li:hover .sub-menu-1 ul li
+            {
+                border-bottom: 2px solid blue;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li:last-child
+            {
+                border-bottom: none;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a
+            {
+                color: white;
+                background: red;
+            }
+            .menubar ul li:hover .sub-menu-1 ul li a:hover
+            {
+                color: white;
+                background: green;
+            }
+
+
+
+            .sub-menu-2
+            {
+                display: none;
+            }
+            .hoverme:hover .sub-menu-2
+            {
+                display: block;
+                position: absolute;
+                margin-left: 180px; margin-top: -47px;
+                background-color: green;
+            }
+
+
+
+            marquee
+            {
+                border: 2px solid blue;
+                color: yellow;
+                position: relative;
+                top: 5px;
+                background-color: black;
+
+            }
+
+
+
+
+
+
+
+            .box1
+            {
+                border: 2px solid blue;
+                width: 33%; height: 200px;
+                position: relative;
+                float: left;
+
+                overflow: hidden;/*to hide -100% left content*/
+
+
+            }
+            .Home1
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+            .content1
+            {
+                background-color: rgba(0,0,0,0.7);
+                color: aqua;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+
+                left: -100%;
+                transition: all 0.5s;
+            }
+            .box1:hover .content1
+            {
+                left: 0;
+            }
+
+
+            .box2
+            {
+                border: 2px solid blue;
+                width: 33%; height: 200px;
+                position: relative;
+                float: left; margin-left: 5px;
+
+                overflow: hidden;/*to hide -100% left content*/
+
+            }
+            .Home2
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+            .content2
+            {
+                background-color: rgba(0,0,0,0.7);
+                color: aqua;
+                text-align: center;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+
+                top: -100%;
+                left: 0;
+                transition: all 0.5s;
+            }
+            .box2:hover .content2
+            {
+                top: 0%;
+            }
+
+            .box3
+            {
+                border: 2px solid blue;
+                width: 32%; height: 200px;
+                position: relative;
+                float: left; margin-left: 5px;
+
+                overflow: hidden;/*to hide -100% left content*/
+
+            }
+            .Home3
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+            .content3
+            {
+                background-color: rgba(0,0,0,0.7);
+                color: aqua;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+
+                right: -100%;
+                transition: all 0.5s;
+            }
+            .box3:hover .content3
+            {
+                right: 0%;
+            }
+
+
+            .paragraph1
+            {
+                width:99%;
+                position: relative;
+                top: 10px;
+                color:lawngreen;
+                border: 2px solid black;
+                background-color:rgba(0,0,0,.7);
+                padding: 12px;
+                font-size:16px;
+                text-transform: capitalize;
+                word-spacing: 5px;
+                text-align: justify-all;
+                column-count:4; clear: both;
+                box-sizing: border-box;
+                margin: 10px;
+            }
+            .paragraph1:hover
+            {
+                color: white;
+                text-shadow:1px 1px 1px red;
+                background-color: rgba(0,0,0,1);
+            }
+
+
+            .placementRecordAnimationA
+            {
+                width: 49%;
+                margin-left:10px;
+                float: left;
+                height: 100px;
+                position: relative; top:5px;
+                padding: 5px;
+                font-size: 15px;
+                background-color: rgba(0,0,0,0.5);
+                box-sizing: border-box;
+            }
+            .placementRecordAnimation1
+            {
+                height: 25%;
+                width: 100%;  margin: 2px; box-sizing: border-box;
+                border:1px solid red;
+                background-color:red;
+                overflow:hidden;
+                color:white; font-family: openSens;
+                animation-name: placementRecordAnimation1;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes placementRecordAnimation1 {
+                0% { background-color:black;color:white; width:20%;}
+                50% { background-color:red;color:aqua; width:50%;}
+                100% { background-color:green; width:98%;}
+            }
+
+            .placementRecordAnimation2
+            {
+                height: 70%;
+                width: 22%;  
+                margin: 2px; box-sizing: border-box;
+                text-align: center;
+                border:1px solid red;
+                background-color:orchid;
+                color: black;
+                font-family: openSens;
+                float: left;
+                animation-name: placementRecordAnimation2;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes placementRecordAnimation2 {
+                0% {background-color:orchid;}
+                25%{background-color:aqua;}
+                50%{background-color:red;}
+                100%{background-color:pink;}
+
+            }
+
+            .placementRecordAnimation3
+            {
+                height: 70%;
+                width: 20%;  
+                margin: 2px; box-sizing: border-box;
+                text-align: center;
+                border:1px solid red;
+                background-color:orchid;
+                color:black;
+                font-family: openSens;
+                float: left;
+                animation-name: placementRecordAnimation3;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes placementRecordAnimation3 {
+                0% {background-color:yellow;}
+                25%{background-color:green;}
+                50%{background-color:aqua;}
+                100%{background-color:crimson;}
+            }
+
+            .placementRecordAnimation4
+            {
+                height: 70%;
+                width: 25%;  
+                margin: 2px; box-sizing: border-box;
+                text-align: center;
+                border:1px solid red;
+                background-color:orchid;
+                color:black;
+                font-family: openSens;
+                float: left;
+                animation-name: placementRecordAnimation4;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes placementRecordAnimation4 {
+                0% {background-color:white;}
+                25%{background-color:aqua;}
+                50%{background-color:yellow;}
+                100%{background-color:green;}
+
+            }
+            .placementRecordAnimation5
+            {
+                height: 70%;
+                width: 30%;  
+                margin: 2px; box-sizing: border-box;
+                text-align: center;
+                border:1px solid red;
+                background-color:orchid;
+                color:black;
+                font-family: openSens;
+                float: left;
+                animation-name: placementRecordAnimation5;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes placementRecordAnimation5 {
+                0% {background-color:fuchsia;}
+                25%{background-color:pink}
+                50%{background-color:lime;}
+                100%{background-color:yellow;}
+            }
+
+            .placementRecordAnimationB
+            {
+                width: 49%;
+                margin-left:10px;
+                padding: 10px;
+                float: right;
+                height: 100px;
+                position: relative; top:5px;
+                background-color: rgba(0,0,0,0.5);
+                box-sizing: border-box;
+            }
+            .placementRecordAnimationB1
+            {
+                height: 75px;
+                width: 15%; 
+                border: 2px solid aqua;
+                background-color: aqua;
+                float: left;
+                position: relative;  /*for making text vertical align*/
+
+                animation-name:placementRecordAnimationB1;
+                animation-duration:1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+            }
+            .placementRecordAnimationB1 p
+            {
+
+                position: absolute;
+                top: 50%;left:50%;
+                transform: translate(-50% ,-50%);
+                font-size: 20px; 
+                font-family: openSens;
+                text-align: center;
+            }
+            @keyframes placementRecordAnimationB1 {
+                0%   {background-color:gray; transform:scale(0);}
+                50%  {background-color:white;transform:scale(1); }
+                100% {background-color:aqua; }
+            }
+
+            .placementRecordAnimationB2
+            {
+                height: 100%;
+                margin-left:10px;
+            }
+
+
+
+
+            .box4
+            {
+                clear: both;
+                width: 98%;
+                height: auto;
+                margin: 10px auto;
+                position: relative;
+                top: 10px;
+                overflow: hidden;
+            }
+            .Home4
+            {
+                width: 100%;
+                height: 100%;
+                border: 2px solid black;
+
+                transition: all 1s;
+            }
+            .box4:hover .Home4
+            {
+                transform:scale(0);
+            }
+            .content4
+            {
+                color:gold; 
+                font-size: 20px; text-align: center;
+                position: absolute;
+                left: 0; top: 0;
+                background-color: rgba(0,0,0,0.8); width: 100%; height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                transform:scale(0) rotate(-180deg);
+                transition: all 0.5s; 
+                opacity: 0;
+            }
+            .box4:hover .content4
+            {
+                transform: scale(1) rotate(0deg);
+                transition-delay: 0.2s;
+                opacity: 1;
+            }
+
+
+            .galleryUP {
+                margin: 5px;
+                border: 2px inset gray; 
+                float: left;
+                width: 24%; height: 200px;
+                background: rgba(0,0,0,0.8); 
+                box-sizing: border-box;
+                color: white; 
+                font-size: 12px;
+
+                animation-name:galleryUP;
+                animation-duration:1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+
+            }
+            @keyframes galleryUP {
+                0%   {background-color:yellow;color:red;}
+                50%  {background-color:blue;color:white; }
+                100% {background-color:red; color:white;}
+            }
+
+            .galleryUP:hover {
+                border: 3px solid red;
+                color: red;
+            }
+
+            .galleryUP img {
+                width: 100%;
+                height: 70%;
+            }
+
+            .galleryUP .desc {
+                padding:5px;
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            .galleryDOWN {
+                margin: 5px;
+                border: 2px inset gray; 
+                float: left;
+                width: 24%; height: 200px;
+                background: rgba(0,0,0,0.8); 
+                box-sizing: border-box;
+                color: white; 
+                font-size: 12px;
+
+                animation-name:galleryDOWN;
+                animation-duration:1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+
+            }
+            @keyframes galleryDOWN {
+                0%   {background-color:red;color:yellow;}
+                50%  {background-color:green;color:black; }
+                100% {background-color:purple; color:white;}
+            }
+
+            .galleryDOWN:hover {
+                border: 3px solid red;
+                color: red;
+            }
+
+            .galleryDOWN img {
+                width: 100%;
+                height: 70%;
+            }
+
+            .galleryDOWN .desc {
+                padding:5px;
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+
+            .ListEntryPlacement
+            {
+                float: left; 
+                clear: both;
+                width:65%;
+                position: relative;
+            }
+            .ListEntryPlacement img
+            {
+                width: 100%;
+
+            }
+            .ListEntryPlacement div
+            {
+                position: absolute;
+                top: 0;
+                left:0;
+                background-color: rgba(0,20,20,0.8);
+                font-size: 30px;
+                color: aqua;
+                word-spacing: 10px;
+                width: 50%;
+                height: 100%;
+                animation-name:ListEntryPlacement;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            .ListEntryPlacement div p
+            {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            @keyframes ListEntryPlacement
+            {
+                from {background-color: rgba(0,20,20,0.8);}
+                to{background-color: rgba(100,100,100,0.8);color:red;}
+            }
+
+
+
+
+
+
+            .List
+            {
+                background-color:black;
+                width: 30%;
+                float: right;
+                padding: 22px;
+                color: white;
+                font-family: sans-serif;
+                word-spacing: 5px;
+            }
+            .List ol
+            {
+                margin-left: 10px;
+            }
+            .List ol li
+            {
+                border: 1px solid aqua;
+                padding: 11px;
+                animation-name: Listanimation;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes Listanimation
+            {
+                0%{ border:1px solid aqua;}
+                50%{border:1px solid red;}
+                100%{ border:1px solid aqua;}
+            }
+            .List ol li:hover
+            {
+                color:green;
+                cursor: pointer;
+                background: yellow;
+            }
+
+
+
+            .MovingGallery
+            {
+                width:49%;
+                position: relative;
+                float: left;
+            }
+            .MovingGallery .image1
+            {
+                width:100%;
+                animation-name: MovingGallery;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction:alternate;
+                animation-timing-function: ease-in-out;
+
+            }
+            @keyframes MovingGallery
+            {
+                from{transform:scale(0);}
+                to{transform:scale(1);}
+            }
+            .MovingGallery .image2
+            {
+                width:100%;
+                position: absolute;
+                top: 0;
+                left:0;
+                animation-name: MovingGallery2;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+
+            }
+            @keyframes MovingGallery2
+            {
+                from{transform:scale(1);}
+                to{transform:scale(0);}
+            }
+
+
+
+            .placements
+            {
+                background-color: rgba(0,0,0,0.8);
+                clear: both;
+                overflow: auto;
+                text-align: center;
+            }
+            .placements div:nth-child(1)
+            {
+                color: red;
+                float: left;
+                width: 46%; 
+                box-sizing: border-box;
+                border: 1px solid red;
+                padding: 10px;
+                margin: 10px;
+                font-size: 50px;
+            }
+            .placements div:nth-child(2)
+            {
+                color: palegreen;
+                float: right;
+                width: 46%; 
+                box-sizing: border-box;
+                border: 1px solid palegoldenrod;
+                padding: 10px;
+                margin: 10px;
+                font-size: 50px;
+            }
+            .placements div:nth-child(3)
+            {
+                color: yellow;
+                float: left; clear: both;
+                width: 46%; 
+                box-sizing: border-box;
+                border: 1px solid yellow;
+                padding: 10px;
+                margin: 10px;
+                font-size: 50px;
+            }
+            .placements div:nth-child(4)
+            {
+                color: aqua;
+                float: right;
+                width: 46%; 
+                box-sizing: border-box;
+                border: 1px solid aqua;
+                padding: 10px;
+                margin: 10px;
+                font-size: 50px;
+            }
+
+
+             .toppers
+            {
+                display: flex;
+                background: rgba(0,0,0,0.8);
+                clear: both;
+                justify-content: space-evenly;
+                
+            }
+            .toppers >div
+            {
+                width: 15%;
+                height: 300px;
+                background-color:gray;
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+                
+                animation-name: topper;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            @keyframes topper
+            {
+                from{ background-color:yellow;color:red;}
+                to{ background-color:aqua; color:black;}
+            }
+
+
+
+            .MovingTable
+            {
+                list-style:decimal;
+                background: linear-gradient(to right,purple, white,green);
+                padding: 10px;
+                float:left;
+                margin-top: 20px;
+                width:18%;
+                z-index: 1;
+
+                animation-name: MovingTable;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+
+
+            }
+            @keyframes MovingTable
+            {
+                from{background: linear-gradient(to right,purple, white,green);}
+                to{background: linear-gradient(to right,purple, red,green);}
+            }
+
+            .MovingTable li
+            {
+                background:activecaption;
+                padding:10px;
+                margin:10px;
+                font-size: 15px;
+                box-sizing: border-box;
+            }
+            .MovingTable li:hover
+            {
+                color: blue;
+                background-color: yellow;
+            }
+
+
+
+
+
+            .Table2
+            {
+                float: right;
+                width: 79%;
+                margin-top: 15px;
+                border: 2px solid black;
+                background-color: rgba(0,0,0,0.5);
+                z-index:-1;
+                color: salmon;
+            }
+            .Table2 th
+            {
+                font-size: 35px;
+                color:yellow;
+            }
+            .Table2 td
+            {
+                padding:5px;
+                font-size: 15px; 
+                word-spacing: 7px;
+            }
+            .Table2 tr:nth-child(even)
+            {
+                background-color:antiquewhite;
+                color: blue;
+                border: 2px solid red;
+            }
+
+
+
+
+
+            .boxLast
+            {
+                width: 95%; clear: both;
+                height: auto;
+                margin: 10px auto;
+                position: relative;
+            }
+            .boxLast img
+            {
+                width: 100%;
+                border: 2px solid red;
+
+                transform: scale(1);
+                transition:all 0.9s;
+            }
+
+            .boxLast:hover img
+            {
+                transform: scale(0);
+            }
+            .contentLast
+            {
+                position: absolute;
+                top: 0; left: 0;
+                width:100%;
+                height:100%;
+
+                padding: 20px 30px;
+                box-sizing: border-box;
+                text-align: center;
+                color: black;
+                font-size: 20px;
+
+                background:linear-gradient(to right,red,yellow,aqua);
+                transform: scale(0);
+
+                transition: all 1s;
+
+            }
+            .boxLast:hover .contentLast
+            {
+                transform: scale(1);
+            }
+
+            
+            
+            
+
+            .paginationcenter {
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                color: black;
+                float: left;
+                font-size: 20px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid yellow;
+                margin: 0 4px;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: blue;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+
+        </style>
+    
+    </head>
+    <body>
+        <a href="WebPage6_MyIntro.html"><div style="position:fixed;bottom: 0;right: 0;z-index: 1;background: black;border-radius: 5px;font-family:serif;font-size:15px;border: 1px solid aqua;color: white;padding: 3px;">
+            Dev:Aman Kushwaha
+        </div>
+        </a>
+        <div class="menubar">
+            <ul>
+                <li><a href="index.html" class="active"><i style="color:yellow" class="fas fa-home"></i> HOME PAGE</a></li>
+                <li><a href="WebPage4_Courses.html"><i style="color:darkmagenta" class="fab fa-discourse"></i> Courses And Degrees</a>       
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                            <li class="hoverme"><a href="WebPage4_Courses.html">PostGraduation</a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="WebPage4_Courses.html">Graduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">PostGraduation</a></li>
+                                        <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                                    </ul>
+                                </div></li>
+                            <li><a href="WebPage4_Courses.html">Diplomas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="WebPage3_Placement.html"><i style="color:red" class="fas fa-user-graduate"></i> Placements</a></li>
+                <li><a href="WebPage2_Hostel.html"><i style="color:firebrick" class="fas fa-hotel"></i> Hostel Life</a></li>
+                <li><a href="Study Room/index.html"><i style="color:green" class="fas fa-graduation-cap"></i>Study Room</a></li>
+                <li><a href="WebPage5_SignUp.html"><i style="color:blue" class="fas fa-user-plus"></i> Sign Up</a>
+            </ul>
+            
+        </div>
+
+    <marquee>To Impart Quality Professional Education, To Conduct Commendable Research And To Provide Credible Consultancy And Extension Services As Per Current And Emerging Socio-Economic Needs. To Continuously Enhance And Enrich The Teaching/Learning Process And Set Such Standards, Education And Otherwise, That Other Institutes Would Want To Emulate.To Be Totally Student-Centric, Thus Promoting The Overall Growth And Development Of Intellect And Personality Of Our Prime Stakeholders, Namely Students, So That Our Alumni Are Worthy Citizens And Highly Sought-After Professionals Worldwide. To Empower The Members Of Faculty And Staff So That The University's Ambience Is One Of Harmony, Mutual Respect, Cooperative Endeavour And Receptivity Towards Positive Ideas. To Proactively Seek Regular Feedback From All The Stakeholders And Take Appropriate Measures Based On Them Thus Leading To Excellent Learning Process.Be Totally Student-Centric, Thus Promoting The Overall Growth And Development Of Intellect And Personality Of Our Prime Stakeholders, Namely Students, So That Our Alumni Are Worthy Citizens And Highly Sought-After Professionals Worldwide.</marquee>
+
+
+
+
+
+
+    <div class="box1">
+        <img src="Photos/Home1.jpg" class="Home1">
+        <div class="content1">
+            <h2>GLA University</h2>
+            <p>
+                In the year 1991 Shri Narayan Das Agrawal decided to fulfil the dream of his father, Late Shri Ganeshi Lal Agrawal and initiated the Sri Jagannath Prasad Ganeshi Lal Bajaj Charitable Trust Samiti in an attempt to make the holy city of Mathura a recognized destination for knowledge seekers from different walks of life.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="box2"> <img src="" alt=""/>
+        <img src="Photos/Home2.JPG" class="Home2">
+        <div class="content2">
+            <h2>VISION</h2>
+            <p>
+                We envision ourselves as a pace-setting university of Academic Excellence focused on education, research and development in established and emerging professions
+            </p>
+        </div>
+    </div>
+
+    <div class="box3">
+        <img src="Photos/Home3.jpg" class="Home3">
+        <div class="content3">
+            <h2>Future</h2>
+            <p>
+                To be totally student-centric, thus promoting the overall growth and development of intellect and personality of our prime stakeholders, namely students, so that our alumni are worthy citizens and highly sought-after professionals worldwide.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="paragraph1">
+        To impart quality professional education, to conduct commendable research and to provide credible consultancy and extension services as per current and emerging socio-economic needs. To continuously enhance and enrich the teaching/learning process and set such standards, education and otherwise, that other institutes would want to emulate.To be totally student-centric, thus promoting the overall growth and development of intellect and personality of our prime stakeholders, namely students, so that our alumni are worthy citizens and highly sought-after professionals worldwide. To empower the members of faculty and staff so that the university's ambience is one of harmony,mutual respect, cooperative endeavour and receptivity towards positive ideas.
+    </div>
+
+
+    <div class="placementRecordAnimationA">
+        <div class="placementRecordAnimation1"> Placement :: <mark>74%</mark> Placement in last 10 year for Computer science Department</div>
+        <div class="placementRecordAnimation2">Microsoft LPA:9.1<br><i class="fab fa-2x fa-windows" style="color:blue"></i></div>
+        <div class="placementRecordAnimation3">Amanzon LPA:16<i class="fab fa-2x fa-aws" style="color:white;font-weight: bold;"></i></div>
+        <div class="placementRecordAnimation4">Google R&D LPA: 8.2<i class="fab fa-2x fa-google-plus-square" style="color:orangered"></i></div>
+        <div class="placementRecordAnimation5">Flipkart E-com. LPA : 16<br><i class="fas fa-2x fa-shopping-cart" style="color:blue"></i></div>
+    </div>
+    <div class="placementRecordAnimationB">
+        <div class="placementRecordAnimationB1"><p>Highest LPA:32</p></div>
+        <img src='Photos/placementRecordAnimationB2_img1.png' class='placementRecordAnimationB2'>
+        <img src='Photos/placementRecordAnimationB2_img2.png' class='placementRecordAnimationB2'>
+        <img src='Photos/placementRecordAnimationB2_img3.png' class='placementRecordAnimationB2'>
+        <img src='Photos/placementRecordAnimationB2_img4.png' class='placementRecordAnimationB2'>
+        <img src='Photos/placementRecordAnimationB2_img5.png' class='placementRecordAnimationB2'>
+    </div>
+
+
+    <div class='box4'>
+        <img src='Photos/Home4.jpg' class="Home4">
+        <div class="content4">
+            <h1 style="color:aqua;">Placement Records</h1>
+            <p>
+                GLA is a well renowned name in the field of education and is directly contributing to the overall education scenario of the country. Our students are working for some very famous companies in the country in different functions.  260+
+                MNCs with salary packsges ranging from 4.5 to 32 LPA (Batch 2020).
+            </p>
+            <br>
+
+            <h2 style="color:red">260+</h2><h4>MNCs with salary packsges ranging from 4.5 to 32 LPA (Batch 2020) and Still Counting</h4>
+            <h2 style="color:red">1700+</h2><h4>Placements offers (batch 2020) & still counting...</h4>
+            <h2 style="color:red">74%</h2><h4>Average Placement over the last 10 year</h4>
+            <h2 style="color:red">32LPA</h2><h4>Highest Package Offfered (in Campus)</h4>
+        </div>
+    </div>
+
+
+
+    <div class="galleryUP">
+        <a target="_blank" href="Photos/galleryImage1.jpg">
+            <img src="Photos/galleryImage1.jpg">
+        </a>
+        <div class="desc">Spread across 110 acres of land, the university is home to more than 10,500 students enrolled</div>
+    </div>
+    <div class="galleryUP">
+        <a target="_blank" href="Photos/galleryImage2.jpg">
+            <img src="Photos/galleryImage2.jpg">
+        </a>
+        <div class="desc">There is a newly built 800-room hostel is Awarded one of the best 11 worldwide architecture design by world architecture community UK</div>
+    </div>
+    <div class="galleryUP">
+        <a target="_blank" href="Photos/galleryImage3.jpg">
+            <img src="Photos/galleryImage3.jpg">
+        </a>
+        <div class="desc">We are truly proud that today, the GLA Institutes that were started as a tribute to Shri Ganeshi Lal Agarwal, are now recognized as a University.</div>
+    </div>
+    <div class="galleryUP">
+        <a target="_blank" href="Photos/galleryImage4.jpg">
+            <img src="Photos/galleryImage4.jpg">
+        </a>
+        <div class="desc"> a picture from when A-State's international Admission Manager, Shannon Wess, visited GLA.</div>
+    </div>
+
+    <div class="galleryDOWN">
+        <a target="_blank" href="Photos/galleryImage5.jpg">
+            <img src="Photos/galleryImage5.jpg">
+        </a>
+        <div class="desc">We have 15 boys hostels with a housing capacity of 4300+ boys and 4 girls hostel with a seating capacity of 1400 girls.</div>
+    </div>
+    <div class="galleryDOWN">
+        <a target="_blank" href="Photos/galleryImage6.jpg">
+            <img src="Photos/galleryImage6.jpg">
+        </a>
+        <div class="desc">The Natraj club conducts cultural and extra-cricular activities.</div>
+    </div>
+    <div class="galleryDOWN">
+        <a target="_blank" href="Photos/galleryImage7.jpg">
+            <img src="Photos/galleryImage7.jpg">
+        </a>
+        <div class="desc"> the Central Library has more than 169899 books over 4,500 CD-ROMs and subscribes to more than 95 national and international journals/magazines </div>
+    </div>
+    <div class="galleryDOWN">
+        <a target="_blank" href="Photos/galleryImage8.jpg">
+            <img src="Photos/galleryImage8.jpg">
+        </a>
+        <div class="desc"> GLA University has a total of 157 well equipped labs where the students get a hands-on experience on various emerging technologies </div>
+    </div>
+
+
+
+    <div class="ListEntryPlacement">
+        <img src="Photos/ListEntryPlacement.jpg">
+        <div><p>1700+ Placement offer in 260+ MNCs (batch 2020)* 32 LPA Highest package.<br><br> 231 GLAians Placed with Accenture<p></div>
+    </div>
+
+
+    <div class="List">
+        <h1 style="color:yellow;text-align: center;">Departments</h1>
+        <ol>
+            <li>Engineering And Technology</li>
+            <li>business Management</li>
+            <li>Applied Science And Humanity</li>
+            <li>Legal Study And Research</li>
+            <li>University Polytechnic</li>
+            <li>Post Graduate Courses</li>
+            <li>Graduate Courses</li>
+            <li>Diploma Courses</li>
+        </ol>
+    </div>
+
+
+
+    <div class="MovingGallery">
+        <img src="Photos/MovingGallery1.jpg" class="image1">
+        <img src="Photos/MovingGallery2.jpg" class="image2">
+    </div>
+
+    <div class="MovingGallery" style="float:right;">
+        <img src="Photos/MovingGallery4.jpg" class="image1">
+        <img src="Photos/MovingGallery5.jpg" class="image2">
+    </div>
+    
+
+    <div class="placements">
+        <div><b>150+</b><p style="color:white;font-size: 20px;">MNCs with salary packages ranging from 4.5 to 32 lakhs PA(batch 2020) and still counting..</p></div>
+        <div><b>1700+</b><p style="color:white;font-size: 20px;">Placements offers (batch 2020) & still counting...</p></div>
+        <div><b>74%</b><p style="color:white;font-size: 20px;">Average placement over the last 10 years 32</p></div>
+        <div><b>32LPA</b><p style="color:white;font-size: 20px;">Highest package offered (in campus)</p></div>
+    </div>
+
+
+    
+     <div class="toppers">
+        <div><img src="Photos/topper1.jpg" style="width:100%;height: 80%;">ANSHUL DIXIT Wipro Technologies Ltd. Branch - B.Tech. - CS , 2019-20</div>
+        <div><img src="Photos/topper2.jpg" style="width:100%;height: 80%;">ANUBHAV SHAKYA Contata Solutions Branch - B.Tech. - CS , 2019-20</div>
+        <div><img src="Photos/topper3.jpg" style="width:100%;height: 80%;">ANURAG SINGH Niit Technologies Ltd. Branch - B.Tech. - CS , 2019-20</div>
+        <div><img src="Photos/topper4.jpg" style="width:100%;height: 80%;">ARCHIT GUPTA Tek Systems Ltd Branch - B.Tech. - CS , 2019-20</div>
+        <div><img src="Photos/topper5.jpg" style="width:100%;height: 80%;">ARPITA SINGH Corporation India Pvt. Ltd. Branch - B.Tech. - CS , 2019-20</div>
+        <div><img src="Photos/topper6.jpg" style="width:100%;height: 80%;">BALDEV Accenture Services Pvt Ltd.  - B.Tech. - CS , 2019-20</div>
+    </div>
+
+
+    <ol class="MovingTable">
+        <li>Placement Record</li>
+        <li>Placement policy</li>
+        <li>Career Counseling</li>
+        <li>Industry Academic Partnership</li>
+        <li>Alumni Testimonials</li>
+        <li>Helpline And FAQs</li>
+        <li>Get In Touch</li>
+    </ol>
+
+
+    <table class="Table2">
+        <tr><th>International tie-ups Of GLA UNIVERSITY<th></tr>
+        <tr><td>MOU with Parana Western State University, Parana State, Brazil<td></tr>
+        <tr><td>MOU with University of Malaya, Malaysia for academic cooperation (Chemistry)<td></tr>
+        <tr><td>MOU with Particle Physics Group, Institute of Physics Academia Sinica, Taiwan (Physics)</td></tr>
+        <tr><td>MOU Arkansas State University (ASU) Jonesboro, USA</td></tr>
+        <tr><td>MOU with Fort Hays State University (FHSU), State of Kansas_USA, Dept-Administration</td></tr>
+        <tr><td>MOU with Jacksonville State University, USA (Computer Engineering & Application)</td></tr>
+        <tr><td>MOU for Academic cooperation with the cloud computing and distributed system(CLOUDS) Laboratory, University of Melbourne, Australia (Computer Engineering & Application)</td></tr>
+        <tr><td>MOU with California State University San Bernardino, USA (IBM, PG)</td></tr>
+        <tr><td>MOU with for Academic cooperation between University of St. Thomas, USA and GLA University (IBM, PG)</td></tr>
+        <tr><td>MOU with Chartered Institute of Management Accountants, UK (CIMA) (IBM, UG)</td></tr>
+    </table>
+    
+    
+    
+   
+
+
+
+
+    <div class="boxLast">
+        <img src="Photos/HomeLast.jpg">
+        <div class="contentLast">
+            <h1 style="color:purple">Accreditions & Rankings</h1>
+            <p>Spread across 110 acres of land, the university is home to more than 10,500 students enrolled in a variety of professional courses. Well designed and maintained buildings, contemporary laboratories, spacious residential complexes and recreational fascilities makes the campus one of the best in the regions and gives its students an edge over their counterparts coming from other universities. The diverse student population makes it hard to describe the typical student and even harder to describe the quintessential GLA student experience. Students come from all over the country; cities, suburbs, small towns and farms; from public, private and parochial schools; from every ethnic and religious background; and from across the economic spectrum. GLA is committed to making educational opportunity accessible to all by granting scholarships and financial aid to its students. Extra-curriculars, co-curricular and athletic opportunities in addition to academics, GLA students are active around and beyond campus.
+                <br>
+                <i class="fab fa-3x fa-facebook-square" style="color:blue"></i> <!-- fa-3x for size-->
+                <i class="fab fa-3x fa-twitter-square"  style="color:aqua"></i>
+                <i class="fab fa-3x fa-instagram" style="color:red"></i>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="paginationcenter">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="index.html" class="active">1</a>
+            <a href="WebPage4_Courses.html">2</a>
+            <a href="WebPage3_Placement.html">3</a>
+            <a href="WebPage2_Hostel.html">4</a>
+            <a href="Study Room/index.html">5</a>
+            <a href="WebPage5_SignUp.html">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hostel</title>
+        <Style>
+            *
+            {
+                margin: 0;
+            }
+            body{
+                background: url(Photos/background2.jpg) no-repeat fixed; /*image repeat attachment */
+                background-size: cover; 
+            }
+            .background {
+                background: url(Photos/glafrontview.jpg) no-repeat;
+                background-size: cover;
+                border: 2px solid black;
+            }
+
+            div.transbox {
+                margin: 30px;
+                background-color: #ffffff;
+                border: 2px solid black;
+                opacity: 0.6;
+            }
+
+            div.transbox p {
+                margin:10px;
+                font-weight: bold;
+                text-align: center;
+                font-size: 30px;
+                color: green;
+            }
+
+            #marquee
+            {
+                border:1px  groove appworkspace;        /* border --width style  color */
+                outline:3px groove red;                /* border on border */
+                outline-offset:1px;                     /*distance bw border and outline */
+                margin-top: px;                       /*distance bw border and monitor border
+                                                              top right bottom left*/
+                border-radius: 20px;                    /*corner curve*/
+                box-shadow: 20px 10px 5px purple;       /*h-offset v-offset blur color;*/
+
+                text-transform:capitalize;                  /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 1px;                           /*distance bw border and text*/
+
+
+                font-size: 15px;                        /*size of fonts */
+                font-family:Georgia;
+                color: window; 
+            }
+
+
+
+            #wingscrollbar
+            {
+                border:3px  outset coral;       /* border --width style  color */
+                margin:20px 5px 0px 5px;                   /*distance bw border and monitor border
+                                                             top right bottom left*/
+
+                color:white;                    /*font color*/ 
+                text-align:justify;             /* left right center  justify*/
+                text-transform: capitalize;     /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 10px;                  /*distance bw border and text*/
+
+                font-size: 20px;                /*size of fonts */
+                font-family:Georgia;
+                line-height: 35px;
+                text-shadow:1px 1px 0 red;
+
+                width: 700px;                   /*box width*/
+                height: 400px;                   /*box height*/
+
+                background-image: url(scrollbarbackground.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;         
+                float: right;                   /*box position*/
+                overflow:scroll ;                 /*scrollbar*/
+
+            }    
+            #scrollbarimage
+            {
+                width: 100%;
+                opacity: .99;
+                animation-name: Animation; 
+                animation-duration:1s;
+                animation-iteration-count:infinite;
+                animation-direction:alternate;  
+            }
+            @keyframes Animation
+            {
+                from{ border-radius:0%;}
+                to{border-radius:13%;}
+            }
+
+
+            #wingscrollbar::-webkit-scrollbar    /*pseudo element*/
+            {
+                width: 30px;
+                background: yellow;
+            }
+            #wingscrollbar::-webkit-scrollbar-track
+            {  
+                width: 30px;
+                border-radius: 100px;
+                background: wheat;
+            }
+            #wingscrollbar::-webkit-scrollbar-thumb
+            {
+                border-radius: 100px;
+                background:linear-gradient(red,green) ;
+
+            }
+            #wingscrollbar::-webkit-scrollbar-corner
+            {
+                border-radius: 100px;
+                background:white ;
+            }
+
+
+            ol
+            {
+                list-style:decimal;
+                width: 220px;
+                background: linear-gradient(to right,purple, red,yellow);
+                padding: 10px;
+                float: left;
+                margin-top:15px;
+            }
+            ol:hover
+            {
+                background: radial-gradient( red,aqua);
+            }
+            ol li
+            {
+                background:activecaption;
+                padding:10px;
+                margin:10px;
+            } ol li:hover
+            {
+                background-color: #09D002;
+                color:snow;
+                cursor: alias;
+            }
+
+
+            ul
+            {
+                list-style:decimal;
+                background: radial-gradient(purple, red,yellow);
+                padding:8px;
+                float: left;
+                margin-left:10px;
+                margin-top: 15px;
+            }
+            ul:hover
+            {
+                background: radial-gradient( purple,aqua);
+            }
+            ul li{
+                background:activecaption;
+                padding:10px;
+                margin:10px;
+            }ul li:hover
+            {
+                background-color: blue;
+                color:red;
+                cursor: alias;
+            }
+
+            #paragraph1{
+                border:1px  outset aqua;                        
+                margin:30px 0px 0px 5px;                   
+                clear: both;
+
+
+                color:white;                    /*font color*/ 
+                text-align:justify;             /* left right center  justify*/
+                text-transform:capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 10px;             /*distance bw border and text*/
+
+                font-size: 20px;         /*size of fonts */
+                font-family:Georgia;
+
+                column-count:5;
+                column-gap:25px;  
+
+                transition-property: all;
+                transition-duration: .1s;
+                transition-timing-function: linear;
+            }
+            h1{ column-span:none; }
+
+            #paragraph1:hover
+            {
+                color: red;
+            }
+
+            #bigframepic
+            {  
+                margin-top: 50px;
+                margin-left: 20px;
+                width:97%;
+                height:600px;
+            }
+
+
+
+            #paragraph2
+            {
+                border:1px  outset aqua;                        
+                margin:40px 0px 0px 5px;                   
+                clear: both;
+
+                color:white;                    /*font color*/ 
+                text-align:justify;              /* left right center  justify*/
+                text-transform:  capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 10px;         /*distance bw border and text*/
+
+                font-size: 20px;         /*size of fonts */
+                font-family:Georgia;
+
+
+                column-count:0;
+                column-gap:25px;  
+            }  
+
+
+
+            #paragraphimage2
+            {  
+                width: 500px; 
+                height: 300px;
+                margin-right: 10px;
+                float: left;
+            }
+
+            #wings
+            {
+                margin-top: 40px;
+                margin-left: 20px;
+                margin-bottom: 40px;
+                margin-right:px;
+                width:45%;
+                height:330px;
+                float: left;
+            }
+            #wings2
+            {
+                margin-top: 50px;
+                margin-left: 40px;
+                width:950px;
+                height:500px;
+                float: left;
+            }
+            #paragraph3
+            {
+                border:1px  outset aqua;                        
+                margin:40px 0px 0px 5px;                   
+                clear: both;
+
+                color:white;                    /*font color*/ 
+                text-align:justify;              /* left right center  justify*/
+                text-transform:  capitalize;          /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 10px;         /*distance bw border and text*/
+
+                font-size: 20px;         /*size of fonts */
+                font-family:Georgia;
+
+
+                column-count:5;
+                column-gap:25px;  
+            }  
+
+
+            #paragraphimage3
+            {  
+                width: 100%;
+                height: 200px;
+            }
+
+
+            #wings345
+            {
+                margin-top: 50px;
+                margin-left: 25px;
+                width:630px;
+                height:350px;
+                float: left;
+            }
+
+
+
+            #myself
+            {
+                border:1px  outset red;       /* border --width style  color */
+                outline:10px inset graytext;   /* border on border */
+                outline-offset:3px;           /*distance bw border and border */
+                width: 90%;                   
+                height: 180px;
+                margin:850px 10px 30px 50px;     /* top right bottom left */
+
+                color:white;                    /*font color*/ 
+                text-align:justify;                /* left right center justify */
+                text-transform:capitalize;     /* capitalize | uppercase | lowercase | none | inherit*/
+                padding: 15px;                   /*distance bw border and text*/
+                font-size: 20px;                /*size of fonts */
+                font-family:Georgia;
+                clear: both;
+
+                text-indent:0px;                /*distance of first line from left border*/
+                background-image: url(Photos/Notice.jpg);
+                background-clip: content-box;   /* image will cover in content only*/
+                background-size: cover;         /*so image will  be cover in border*/
+                box-sizing: border-box;
+            }
+
+
+
+                 .paginationcenter {
+                text-align: center;
+            }
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination a {
+                color: white;
+                float: left;
+                font-size: 20px;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+                border: 1px solid yellow;
+                margin: 0 4px;
+            }
+            .pagination a:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagination a:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagination a.active {
+                background-color: blue;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="background">
+            <div class="transbox">
+                <p>Hostel And Mess Facilities Of GLA University</p>
+            </div>
+        </div>
+
+        <div id="marquee">
+            <marquee>
+                GLA University offers courses at the undergraduate level such as B.Tech, B.Sc, B.Pharm, BCA, BA, B.ED, B.Com, BA LLB, BBA and at the postgraduate level M.Tech, MCA, M.Sc, M.Pharm, MBA in various field.
+                GLA University, Mathura offers Placements to candidates through their Placement Cell, a working body which counsels the job aspirants before appearing for an interview by the Industrial Experts.
+                Scholarships are offered to deserving and meritorious candidates, particularly to those from low-economic backgrounds or from Reserved Categories.
+                Scholarships are offered to candidates score 90% and above marks in immediate previous year’s examination.Scholars hips for Economically weak students are offered through the Social Welfare Department of UP.
+            </marquee>
+        </div>
+
+
+
+
+
+
+
+        <div id="wingscrollbar">
+            <img id="scrollbarimage" src="Photos/scrollbarimage.jpg">
+            Hostel Fee:(Subject to Availability of rooms as hostel, rooms are limited &will be allocated on first come- first serve basis.) 
+            Every year Hostel charges will be increased by Rs.2,000/- 
+            Mess charges:Rs. 34,000/- Per Annum (as advance mess run on actual expenses basis) 
+            Hostel Security -Rs. 5000/-in the first year of the course is to be paid additional (refundable on vacating the hostel on successful completion of course).
+            Note: To avail hostel in the subsequent only double/triple occupancy room are avail in second year. Student will be required to submit his/her full hostel fee latest by February every year. Hostel will be provide full Academic year only. Above hostel fee is for regular academic session only.
+            Hostel Fee:(Subject to Availability of rooms at the hostel, rooms are limited &will be allocated on the first come- first serve basis.) 
+            Every year Hostel charges will be increased by Rs.2,000/- 
+            Mess charges: Rs. 34,000/- Per Annum (as advance mess run on actual expenses basis) 
+            Hostel Security -Rs. 5000/-in the first year of the course is to be paid additional (refundable on vacating the hostel on successful completion of course).
+            Note: To avail hostel in the subsequent only double/triple occupancy room are avail in the second year. The student will be required to submit his/her full hostel fee latest by February every year. The hostel will provide full Academic year only. Above hostel, a fee is for the regular academic session only.       
+        </div>
+
+
+
+        <ol>
+            <li>Hostel A Block -45,000.R</li>
+            <li>Hostel B Block -43,000.R</li>
+            <li>Hostel c Block -43,000.R</li>
+            <li>Hostel D Block -48,000.R</li>
+            <li>Hostel E Block -49,000.R</li>
+            <li>Hostel F Block -45,000.R</li>
+            <li>Hostel G Block -51,000.R</li>
+            <li>Hostel H Block -52,000.R</li>
+            <li>Hostel I Block -54,000.R</li>
+            <li>Hostel J Block -58,000.R</li>
+
+        </ol>
+        <ul>
+            <li>Wing-1 : 54,000.R :Non AC</li>
+            <li>Wing-2 : 58,000.R :A1  AC</li>
+            <li>Wing-3 : 60,000.R :Non AC</li>
+            <li>Wing-4 : 60,000.R :Non AC</li>
+            <li>Wing-5 : 62,000.R :Non AC</li>
+            <li>Wing-6 : 73,000.R :Non AC</li>
+        </ul>
+
+
+
+        <div id="paragraph1">
+            <h2 style="color: royalblue"> About The Campus Hostel Life</h2>
+            Thousands of students from all across the country live in the hostels in GLA University, which comes closest to being 'a home away from home'. GLA University provides well-furnished hostel facility to its outstation candidates. The campus hostels are surrounded by lush green lawns and playing fields. The separate facilities for boys and girls, caring wardens and a tight security ensures a pleasant stay allowing you to focus on your academics.  The hostels have complete power backup. Facilities for indoor games like TT, carom, chess, Television etc. are also available.
+            A warden / hostel in-charge looks after the administration of the hostel. Students enjoy a homely and comfortable stay with a sense of camaraderie and fraternity. Hygienic, quality food prepared by professionally-qualified cooks is provided to the students in the hostel canteen. Meals provided in the hostel mess are wholesome and nourishing. The mess caters to the tastes of the students with varied culinary preferences from different regions. The mess menu is planned and managed by the students in consultation with the caterer and the management.
+            Students also get a highly professional on-campus laundry service.  Whilst internet access and STD facilities ensure close contact with family and friends outside, the fully equipped common rooms allow for that relaxed time with friends on Campus.
+            The campus has strict security through smart cards, biometric readers, latest IP cameras, fire warning systems, 24-hour guards. For total care for in any emergencies, we have our own dispensaries with best doctors and nurses.
+            Students are provided TV, Newspapers etc. all the hostels have in-door games like, Carom, Badminton, TT. A multi-purpose Gym has been set-up for complete fitness which include cardio & strength training.
+
+        </div >
+
+
+        <img src="Photos/bigframepic.png" id="bigframepic">
+
+
+        <div id="paragraph2">
+            <img  src="Photos/hostel1.jpg" id="paragraphimage2" >
+            For students to grow mentally, physical growth is mandatory. They need proper nourishment which is only possible through Balanced Diet. Keeping that in mind all the cafeterias have menu that are planned by a group of expert dieticians which provide them healthy and nutritious food. We understand that students have cravings for snacks every now and then but we ensure that they don’t eat junk. The food provided in cafeteria is hygienic and vegetarian. We have 4 cafeterias in campus that helps the students to fulfil their cravings as and when they want. The cafeteria offers a good menu of multi-cuisine delights, amidst a lively, jolly atmosphere.
+            The sports department makes sure that all the latest and top-of-the-line equipment are made available to those having interest in the various sports-related activities as offered by the university. These equipments are all of top-notch quality and bear the same standards as those offered by the best of the best in the market. The students request, from time to time, additions in the repertoire of sports-related goods and they are fulfilled by the university.
+
+        </div> 
+
+        <img src="Photos/wingback.jpg" id="wings">
+        <img src="Photos/hostelintro.jpg" id="wings">
+
+        <div id="paragraph3" >
+            <img src="Photos/hostel2.jpg" id="paragraphimage3" >
+            <p>  The future of India, of any country for that matter, lies with its youth. GLA University has taken on the onerous responsibility of imparting comprehensive and high quality education, which is both vocational-based, as well as professional in nature to the young minds who desire to be part of the booming world economy in general and Indian economy in particular. Just as the University has evolved from a humble institution (but with high aspirations) to its present size, the Health Care unit – aptly named AAROGYAM too has grown. We now have four qualified and experienced physicians, ably supported by efficient nursing aides.
+                A sound mind and creative intellect can only flourish in a healthy body. Just as important a good teacher is for stimulating the mind of a student or a sports instructor for physical fitness, there is a crucial role of a physician to keep the body healthy and disease-free.
+                The essential objective of Aarogyam is to maintain a holistic approach to the physical well-being of our students, faculty and support staff. We aim to offer 24x7 prompt and effective medical, surgical and psychosocial support to all workers and residents within the GLA Campus.
+            </p> 
+        </div>    
+
+        <img src="Photos/hostel3.jpg" id="wings345">
+        <img src="Photos/hostel4.jpg" id="wings345">
+        <img src="Photos/hostel5.jpg" id="wings345">
+        <img src="Photos/placement.jpg" id="wings345">
+
+
+        <p id="myself">
+            Hello Guys this is <mark>Aman kushwaha</mark> 3rd year btech CS Student.I have  created this website
+            for educational purpose. on this website i will provide you assignments and pdf for all the btech cs students
+            . Here you can download the latest solution of evey assignment which is already given by faculty in your class.
+            <br><b><u>NOTE:</u></b>--this website is created only for educational purpose please do your assignment
+            by Your yourself.For More Notifiactions you can signup on this website when a new assignment will upload you
+            will get immediate notifiaction on your browser. ThankS Guys
+        </p>
+        
+        
+         <div class="paginationcenter">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="index.html">1</a>
+            <a href="WebPage4_Courses.html">2</a>
+            <a href="WebPage3_Placement.html">3</a>
+            <a href="WebPage2_Hostel.html" class="active">4</a>
+            <a href="Study Room/index.html">5</a>
+            <a href="WebPage5_SignUp.html">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    </body>
+</html>
